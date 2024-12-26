@@ -3,262 +3,449 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon" />
-    <title>NinjaMail</title>
+    <meta
+      name="description"
+      content="Create and launch captivating email campaigns effortlessly with NinjaMail. Reach more customers, engage your audience, and manage campaigns from start to end with proven tools."
+    />
+    <meta
+      name="keywords"
+      content="NinjaMail, email campaigns, email marketing, customer engagement, marketing tools, email design, campaign management, proven email tools, email marketing platform"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NinjaMail | Create Stunning Email Campaigns with Ease</title>
   </head>
   <body>
-    <header>
-      <div
-        class="header-container main-container font-raleway flex items-center justify-between text-black"
-      >
-        <a href="#" class="logo flex items-center" aria-label="NinjaMail">
-          <img src="./imgs/logo.png" alt="logo" loading="lazy" />
-          NinjaMail
+    <header class="header">
+      <div class="container flex items-center justify-between">
+        <a href="#" class="logo flex items-center" aria-label="Home">
+          <svg
+            width="129"
+            height="64"
+            viewBox="0 0 129 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect
+              y="-0.25"
+              width="129"
+              height="64.5"
+              fill="url(#pattern0_1_129)"
+            />
+            <defs>
+              <pattern
+                id="pattern0_1_129"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_1_129"
+                  transform="scale(0.000833333 0.00166667)"
+                />
+              </pattern>
+              <image
+                id="image0_1_129"
+                width="1200"
+                height="600"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+          <span class="text-black font-secondary">NinjaMail</span>
         </a>
-        <div class="nav-button flex items-center">
+        <div class="navigation flex items-center">
           <nav>
-            <ul class="flex">
-              <li><a href="#" aria-label="FEATURES">FEATURES</a></li>
-              <li><a href="#" aria-label="PRICING">PRICING</a></li>
-              <li><a href="#" aria-label="SERVICES">SERVICES</a></li>
-              <li><a href="#" aria-label="PARTNERS">PARTNERS</a></li>
+            <ul class="flex items-center">
+              <li>
+                <a href="#" class="text-black font-secondary transition"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-black font-secondary transition"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-black font-secondary transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-black font-secondary transition"
+                  >Partners</a
+                >
+              </li>
             </ul>
           </nav>
-          <a
-            href="#"
-            class="header-button text-center green-button"
-            aria-label="SIGN UP FREE"
-            >SIGN UP FREE</a
-          >
+          <a href="#" class="header-button transition">Sign up free</a>
         </div>
       </div>
     </header>
     <main>
-      <div class="background">
-        <section class="hero main-container">
-          <div class="hero-container flex items-center">
-            <div class="hero-content">
-              <h1 class="black-text">Create Stunning Email Campaigns</h1>
-              <p class="font-raleway black-text font-medium">
-                Create and launch email campaigns that captivate your customers
-                in just a few clicks.
-              </p>
-              <div class="hero-buttons flex items-center flex-wrap">
-                <a href="#" class="button green-button">TRY NOW</a>
-                <a href="#" class="button white-button">GET A DEMO</a>
-              </div>
+      <section class="hero container primary-container">
+        <div class="hero-container  flex items-center">
+          <article>
+            <h1 class="font-primary text-black">Create Stunning Email Campaigns</h1>
+            <p class="font-secondary text-black">
+              Create and launch email campaigns that captivate your customers in
+              just a few clicks.
+            </p>
+            <div class="buttons flex">
+              <a href="#" class="button primary-button">Try now</a>
+              <a href="#" class="button secondary-button">Get demo</a>
             </div>
-          </div>
-        </section>
-        <section class="video">
-          <div class="video-container secondary-container">
-            <div class="video-bg flex items-center justify-center">
-              <div class="video-content text-center">
-                <h2 class="text-white">Reach More Customers</h2>
-                <a href="#" class="button white-button" aria-label="LEARN HOW"
-                  >LEARN HOW</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="source">
-          <div class="source-container main-container flex flex-wrap">
-            <article class="source-card">
-              <img
-                src="./imgs/source-image-card-one.png"
-                alt="source-card-image"
-                loading="lazy"
-              />
-              <div class="source-card-content font-raleway">
-                <p class="text-black">
-                  Launch campaigns but also find new customers. Our unique
-                  platform handles campaigns from start to end.
-                </p>
-                <a href="#" aria-label="Learn More">Learn More</a>
-              </div>
-            </article>
-            <article class="source-card">
-              <img
-                src="./imgs/source-image-card-two.png"
-                alt="source-card-image"
-                loading="lazy"
-              />
-              <div class="source-card-content font-raleway">
-                <p class="text-black">
-                  Start building and sharing with your team today. NinjaMail is
-                  renowned for its industry leading team collaboration tools.
-                </p>
-                <a href="#" aria-label="Learn More">Learn More</a>
-              </div>
-            </article>
-            <article class="source-content text-black">
-              <h2>The source for proven, engaging email campaigns</h2>
-              <p class="font-raleway">
-                Whether you’re a startup, small business, e-commerce store, or
-                want to promote your app, NinjaMail has the feature set tailored
-                for your business.
-              </p>
-            </article>
-          </div>
-        </section>
-        <section class="audience main-container">
-          <div
-            class="audience-cards-wrapper flex items-center justify-center flex-wrap"
-          >
-            <article class="audience-card">
-              <img
-                src="./imgs/audience-one.png"
-                alt="audience-card"
-                loading="lazy"
-              />
-              <div class="audience-card-content font-raleway text-white flex">
-                <h3>Frankie</h3>
-                <h4>Member since 2016</h4>
-              </div>
-            </article>
-            <article class="audience-card">
-              <img
-                src="./imgs/audience-two.png"
-                alt="audience-card"
-                loading="lazy"
-              />
-              <div class="audience-card-content font-raleway text-white flex">
-                <h3>Camile</h3>
-                <h4>Member since 2012</h4>
-              </div>
-            </article>
-            <article class="audience-card">
-              <img
-                src="./imgs/audience-three.png"
-                alt="audience-card"
-                loading="lazy"
-              />
-              <div class="audience-card-content font-raleway text-white flex">
-                <h3>Elayne</h3>
-                <h4>Member since 2018</h4>
-              </div>
-            </article>
-          </div>
-          <h2 class="text-black text-center">
-            Learn how others are reaching their audience easier than ever
-            before.
-          </h2>
-          <form action="" class="flex items-center justify-center flex-wrap">
-            <input type="email" placeholder="Enter your email" required />
-            <input
-              type="submit"
-              value="JOIN OUR LIST"
-              class="button green-button"
-            />
-          </form>
-        </section>
-      </div>
-      <section class="brands secondary-container text-center">
-        <h2 class="text-black">All the best brands already use us.</h2>
-        <div
-          class="brands-logo-wrapper flex items-center justify-center flex-wrap"
-        >
-          <a href="#" aria-label="Brands Logo"
-            ><img src="./imgs/brand-one.png" alt="Brand Logo" loading="lazy"
-          /></a>
-          <a href="#" aria-label="Brands Logo"
-            ><img src="./imgs/brand-two.png" alt="Brand Logo" loading="lazy"
-          /></a>
-          <a href="#" aria-label="Brands Logo"
-            ><img src="./imgs/brand-three.png" alt="Brand Logo" loading="lazy"
-          /></a>
-          <a href="#" aria-label="Brands Logo"
-            ><img src="./imgs/brand-four.png" alt="Brand Logo" loading="lazy"
-          /></a>
-          <a href="#" aria-label="Brands Logo"
-            ><img src="./imgs/brand-five.png" alt="Brand Logo" loading="lazy"
-          /></a>
+          </article>
         </div>
       </section>
-      <section class="get-started flex items-center">
-        <div class="get-started-content secondary-container text-center">
-          <h2 class="text-white">Get started today!</h2>
-          <a href="#" class="button white-button" aria-label="PICK A PLAN"
-            >PICK A PLAN</a
+      <section class="video">
+        <div class="container secondary-container">
+          <div
+            class="video-holder relative flex items-center justify-center flex-col"
           >
+            <h2 class="text-white font-primary">Reach More Customers</h2>
+            <a href="#" class="button secondary-button">Learn How</a>
+          </div>
         </div>
+      </section>
+      <section class="features relative">
+        <div
+          class="container primary-container relative flex items-center justify-center flex-wrap"
+        >
+          <article class="feature-card">
+            <img
+              src="./images/feature-card-1-image.png"
+              alt=""
+              loading="lazy"
+            />
+            <div class="font-secondary">
+              <p class="text-black">
+                Launch campaigns but also find new customers. Our unique
+                platform handles campaigns from start to end.
+              </p>
+              <a href="#">Learn More ></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img
+              src="./images/feature-card-2-image.png"
+              alt=""
+              loading="lazy"
+            />
+            <div class="font-secondary">
+              <p class="text-black">
+                Start building and sharing with your team today. NinjaMail is
+                renowned for its industry leading team collaboration tools.
+              </p>
+              <a href="#">Learn More ></a>
+            </div>
+          </article>
+          <article class="feature-content text-black">
+            <h2 class="font-primary">
+              The source for proven, engaging email campaigns
+            </h2>
+            <p class="font-secondary">
+              Whether you’re a startup, small business, e-commerce store, or
+              want to promote your app, NinjaMail has the feature set tailored
+              for your business.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="members container primary-container flex items-center justify-center flex-wrap"
+      >
+        <article class="relative">
+          <img
+            src="./images/member-1-image.png"
+            class="transition"
+            alt="Photo of Frankie, a member since 2016"
+            loading="lazy"
+          />
+          <div class="font-secondary text-white flex flex-col">
+            <h3>Frankie</h3>
+            <h4>Member since 2016</h4>
+          </div>
+        </article>
+        <article class="relative">
+          <img
+            src="./images/member-2-image.png"
+            class="transition"
+            alt="Photo of Camile, a member since 2016"
+            loading="lazy"
+          />
+          <div class="font-secondary text-white flex flex-col">
+            <h3>Camile</h3>
+            <h4>Member since 2016</h4>
+          </div>
+        </article>
+        <article class="relative">
+          <img
+            src="./images/member-3-image.png"
+            class="transition"
+            alt="Photo of Elayne, a member since 2016"
+            loading="lazy"
+          />
+          <div class="font-secondary text-white flex flex-col">
+            <h3>Elayne</h3>
+            <h4>Member since 2016</h4>
+          </div>
+        </article>
+      </section>
+      <section class="join-our-list container secondary-container relative">
+        <h2 class="font-primary text-center text-black">
+          Learn how others are reaching their audience easier than ever before.
+        </h2>
+        <form action="#" class="flex justify-center flex-wrap">
+          <input
+            type="email"
+            class="font-secondary text-black"
+            required
+            placeholder="Enter your email"
+          />
+          <button type="submit" class="button primary-button">
+            Join our list
+          </button>
+        </form>
+      </section>
+      <section class="partners container secondary-container">
+        <h2 class="font-primary text-center text-black">
+          All the best brands already use us.
+        </h2>
+        <ul class="flex items-center justify-center flex-wrap">
+          <li>
+            <a href="#" class="transition" aria-label="Last Paris Knight Logo">
+              <img
+                src="./images/partner-logo-1.png"
+                alt="Last Paris Knight"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="transition" aria-label="Dragon Eye Vodka Logo">
+              <img
+                src="./images/partner-logo-2.png"
+                alt="Dragon Eye Vodka"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="transition" aria-label="Quest AI Logo">
+              <img
+                src="./images/partner-logo-3.png"
+                alt="Quest AI"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="transition" aria-label="Radio Tee Logo">
+              <img
+                src="./images/partner-logo-4.png"
+                alt="Radio Tee"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="transition" aria-label="Game Ecommerce Logo">
+              <img
+                src="./images/partner-logo-5.png"
+                alt="Game Ecommerce Logo"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="get-started text-center">
+        <h2 class="font-primary text-white">Get started today!</h2>
+        <a href="#" class="button secondary-button">Pick a plan</a>
       </section>
     </main>
-    <footer>
-      <div class="footer-container secondary-container font-raleway text-black">
-        <div class="top-footer flex justify-between flex-wrap">
-          <a
-            href="#"
-            class="logo-footer flex items-center"
-            aria-label="NinjaMail"
+    <footer class="footer">
+      <div
+        class="main-footer container secondary-container flex justify-between"
+      >
+        <a href="#" class="logo flex items-center" aria-label="Home">
+          <svg
+            width="92"
+            height="45"
+            viewBox="0 0 92 45"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <img src="./imgs/logo.png" alt="logo" loading="lazy" />
-            NinjaMail
-          </a>
-          <ul class="container-links flex flex-wrap">
+            <rect
+              y="-0.500977"
+              width="92"
+              height="46"
+              fill="url(#pattern0_1_139)"
+            />
+            <defs>
+              <pattern
+                id="pattern0_1_139"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_1_139"
+                  transform="scale(0.000833333 0.00166667)"
+                />
+              </pattern>
+              <image
+                id="image0_1_139"
+                width="1200"
+                height="600"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+          <span class="text-black font-secondary">NinjaMail</span>
+        </a>
+        <nav class="navigation flex">
+          <ul class="column flex">
             <li>
-              <ul class="list-links flex">
+              <ul class="flex flex-col">
                 <li>
-                  <ul>
-                    <li><a href="#" aria-label="Features">Features</a></li>
-                    <li><a href="#" aria-label="Pricing">Pricing</a></li>
-                    <li><a href="#" aria-label="Services">Services</a></li>
-                    <li><a href="#" aria-label="Partners">Partners</a></li>
-                  </ul>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Features</a
+                  >
                 </li>
                 <li>
-                  <ul>
-                    <li><a href="#" aria-label="About Us">About Us</a></li>
-                    <li><a href="#" aria-label="Tutorials">Tutorials</a></li>
-                    <li><a href="#" aria-label="Resources">Resources</a></li>
-                    <li>
-                      <a href="#" aria-label="Help Center">Help Center</a>
-                    </li>
-                    <li><a href="#" aria-label="Templates">Templates</a></li>
-                    <li>
-                      <a href="#" aria-label="Case Studies">Case Studies</a>
-                    </li>
-                  </ul>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Partners</a
+                  >
                 </li>
               </ul>
             </li>
             <li>
-              <ul class="list-links flex">
+              <ul class="flex flex-col">
                 <li>
-                  <ul>
-                    <li><a href="#" aria-label="Medium">Medium</a></li>
-                    <li><a href="#" aria-label="Twitter">Twitter</a></li>
-                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
-                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-                  </ul>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >About Us</a
+                  >
                 </li>
                 <li>
-                  <ul>
-                    <li><a href="#" aria-label="Contact Us">Contact Us</a></li>
-                    <li><a href="#" aria-label="Slack">Slack</a></li>
-                    <li><a href="#" aria-label="Jobs">Jobs</a></li>
-                  </ul>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Tutorials</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Resources</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Help Center</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Templates</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Case Studies</a
+                  >
                 </li>
               </ul>
             </li>
           </ul>
-        </div>
-        <span class="footer-line"></span>
-        <div class="sub-footer flex items-center flex-wrap justify-between">
-          <p>
-            NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
-            rights reserved.
-          </p>
-          <ul class="flex">
+          <ul class="column flex">
             <li>
-              <a href="#" aria-label="Terms & Conditions">Terms & Conditions</a>
+              <ul class="flex flex-col">
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Medium</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li><a href="#" aria-label="Privacy Policy">Privacy Policy</a></li>
+            <li>
+              <ul class="flex flex-col">
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Slack</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="font-secondary text-black font-bold"
+                    >Jobs</a
+                  >
+                </li>
+              </ul>
+            </li>
           </ul>
-        </div>
+        </nav>
+      </div>
+      <span class="horizontal-line"></span>
+      <div
+        class="sub-footer container secondary-container flex items-center justify-between"
+      >
+        <p class="font-secondary font-bold text-black">
+          NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
+          rights reserved.
+        </p>
+        <ul class="flex items-center">
+          <li>
+            <a href="#" class="font-secondary font-bold text-black"
+              >Terms & Conditions</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-secondary font-bold text-black"
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
